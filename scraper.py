@@ -108,7 +108,6 @@ for pages in itertools.count(1):
     block = soup.find('ol', attrs = {'class':'sys_itemslist'})
     links = block.findAll('a')
     for link in links:
-        print link
         fileurl = 'http://www.bournemouth.gov.uk' + link['href']
         if '.csv' in fileurl:
             csvMth = link.text[:3]
