@@ -87,9 +87,9 @@ entity_id = "E1202_BC_gov"
 url = "http://www.bournemouth.gov.uk/CouncilDemocratic/AboutYourCouncil/Transparency/PaymentstoSuppliers.aspx?GenericListPaymentstoSuppliers_List_GoToPage={}"
 errors = 0
 data = []
-proxy = urllib2.ProxyHandler({'http': '195.89.201.48:80'})
-opener = urllib2.build_opener(proxy)
-urllib2.install_opener(opener)
+# proxy = urllib2.ProxyHandler({'http': '195.89.201.48:80'})
+# opener = urllib2.build_opener(proxy)
+# urllib2.install_opener(opener)
 
 #### READ HTML 1.0
 
@@ -108,7 +108,6 @@ for pages in itertools.count(1):
     block = soup.find('ol', attrs = {'class':'sys_itemslist'})
     links = block.findAll('a')
     for link in links:
-        print link
         fileurl = 'http://www.bournemouth.gov.uk' + link['href']
         if '.csv' in fileurl:
             csvMth = link.text[:3]
