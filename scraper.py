@@ -87,9 +87,9 @@ entity_id = "E1202_BC_gov"
 url = "http://www.bournemouth.gov.uk/CouncilDemocratic/AboutYourCouncil/Transparency/PaymentstoSuppliers.aspx?GenericListPaymentstoSuppliers_List_GoToPage={}"
 errors = 0
 data = []
-# proxy = urllib2.ProxyHandler({'http': '195.89.201.48:80'})
-# opener = urllib2.build_opener(proxy)
-# urllib2.install_opener(opener)
+proxy = urllib2.ProxyHandler({'http': '162.13.86.16:8080'})
+opener = urllib2.build_opener(proxy)
+urllib2.install_opener(opener)
 
 #### READ HTML 1.0
 
