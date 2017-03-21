@@ -1,4 +1,4 @@
- #-*- coding: utf-8 -*-
+  #-*- coding: utf-8 -*-
 
 #### IMPORTS 1.0
 import os
@@ -87,9 +87,6 @@ entity_id = "E1202_BC_gov"
 url = "http://www.bournemouth.gov.uk/CouncilDemocratic/AboutYourCouncil/Transparency/PaymentstoSuppliers.aspx?GenericListPaymentstoSuppliers_List_GoToPage={}"
 errors = 0
 data = []
-proxy = urllib2.ProxyHandler({'http': '62.100.206.253:3128'})
-opener = urllib2.build_opener(proxy)
-urllib2.install_opener(opener)
 
 #### READ HTML 1.0
 
